@@ -175,6 +175,7 @@
   border: 2px solid #FFFFFF;
 }
 
+<<<<<<< HEAD
 /* User Menu */
 .user-menu {
   display: flex;
@@ -260,6 +261,8 @@
   font-weight: 500;
 }
 
+=======
+>>>>>>> 3d9a7c92d22e76805c438f1863372abf150c5d68
 /* Mobile */
 .hidden-desktop {
   display: none;

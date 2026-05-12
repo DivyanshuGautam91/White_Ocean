@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Link, useNavigate } from 'react-router-dom';
 import { Search, ShoppingCart, User, Menu, X, LogOut } from 'lucide-react';
 import logo from '../assets/whiteocean.png';
 import useAuthStore from '../store/authStore';
+=======
+import { Link } from 'react-router-dom';
+import { Search, ShoppingCart, User, Menu, X } from 'lucide-react';
+import logo from '../assets/whiteocean.png';
+>>>>>>> 3d9a7c92d22e76805c438f1863372abf150c5d68
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+<<<<<<< HEAD
   const { user, isAuthenticated, logout } = useAuthStore();
   const navigate = useNavigate();
 
@@ -15,6 +22,8 @@ const Navbar = () => {
     navigate('/');
     setIsMobileMenuOpen(false);
   };
+=======
+>>>>>>> 3d9a7c92d22e76805c438f1863372abf150c5d68
 
   return (
     <nav className="navbar">
@@ -45,6 +54,7 @@ const Navbar = () => {
 
         {/* Icons */}
         <div className="navbar-icons">
+<<<<<<< HEAD
           {isAuthenticated ? (
             <div className="user-menu hidden-mobile">
               <Link to="/profile" className="user-profile">
@@ -66,6 +76,11 @@ const Navbar = () => {
             </>
           )}
           
+=======
+          <Link to="/profile" className="icon-btn hidden-mobile">
+            <User size={22} />
+          </Link>
+>>>>>>> 3d9a7c92d22e76805c438f1863372abf150c5d68
           <Link to="/cart" className="icon-btn cart-btn">
             <ShoppingCart size={22} />
             <span className="cart-badge">3</span>
@@ -93,6 +108,7 @@ const Navbar = () => {
               <Link to="/" className="mobile-link" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
               <Link to="/products" className="mobile-link" onClick={() => setIsMobileMenuOpen(false)}>Shop</Link>
               <Link to="/vendors" className="mobile-link" onClick={() => setIsMobileMenuOpen(false)}>Vendors</Link>
+<<<<<<< HEAD
               {isAuthenticated ? (
                 <>
                   <Link to="/profile" className="mobile-link" onClick={() => setIsMobileMenuOpen(false)}>Profile</Link>
@@ -106,6 +122,9 @@ const Navbar = () => {
                   <Link to="/register" className="mobile-link" onClick={() => setIsMobileMenuOpen(false)}>Sign Up</Link>
                 </>
               )}
+=======
+              <Link to="/profile" className="mobile-link" onClick={() => setIsMobileMenuOpen(false)}>Profile</Link>
+>>>>>>> 3d9a7c92d22e76805c438f1863372abf150c5d68
               <Link to="/vendor/dashboard" className="mobile-link" onClick={() => setIsMobileMenuOpen(false)}>Vendor Dashboard</Link>
             </div>
           </div>
